@@ -17,9 +17,9 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 mizzao:bootstrap-3
 underscore
-iron:router
 sacha:spin
 ian:accounts-ui-bootstrap-3
 accounts-password
 standard-minifier-css
 standard-minifier-js
+kadira:flow-router
