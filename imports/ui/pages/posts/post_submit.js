@@ -1,3 +1,9 @@
+import { Template } from 'meteor/templating';
+import { Router } from 'meteor/iron:router';
+import { Posts } from '../../../api/posts/posts.js';
+
+import './post_submit.html';
+
 Template.postSubmit.events({
 	'submit form': function(e) {
 		// when browser can go ahead and try to submit the form ??? 

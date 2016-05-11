@@ -1,3 +1,5 @@
+import { Posts } from '../../api/posts/posts.js';
+
 if(Posts.find().count() == 0) {
   Posts.insert({
   	title: 'Introducing Telescope',
