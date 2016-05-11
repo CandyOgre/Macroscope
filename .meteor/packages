@@ -22,4 +22,4 @@ ian:accounts-ui-bootstrap-3
 accounts-password
 standard-minifier-css
 standard-minifier-js
-kadira:flow-router
+iron:router
