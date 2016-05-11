@@ -2,4 +2,4 @@
 import './accounts-ui-config.js';
 
 // Set up routes
-import './routes.js';
+import './router.js';

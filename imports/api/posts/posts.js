@@ -1,6 +1,7 @@
-Posts = new Mongo.Collection('posts');
+import { Mongo } from 'meteor/mongo';
 
-// how it works ?
+export const Posts = new Mongo.Collection('posts');
+
 Posts.allow({
 	insert: function(userId, doc) {
 		// allow posting only if you are logged in
