@@ -16,7 +16,7 @@ Meteor.methods({
 });
 
 Posts.allow({
-	insert: function(userId, doc) {
+	insert(userId, doc) {
 		// allow posting only if you are logged in
 		return !! userId;
 	}
