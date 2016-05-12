@@ -5,6 +5,27 @@ import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 export const Posts = new Mongo.Collection('posts');
 
 Meteor.methods({
+  'posts.insert'(url, title) {
+    new SimpleSchema({
+      url: {type: String},
+      title: {type: String}
+    }).validate({url, title});
+
+    if(this.userId === undefined) {
+      alert('Not logged in');
+      return;
+    }
+
+    Posts.insert({
+      title: title,
+      url: url,
+      owner: this.userId
+    });
+
+    //TODO: check for inserting, lazy pig!
+    console.log(`Inserted with title: ${title}`);
+  },
+
   'posts.remove'(postId) {
   	new SimpleSchema({
   	  postId: {type: String}
@@ -13,11 +34,4 @@ Meteor.methods({
   	const post = Posts.findOne(postId);
   	Posts.remove(postId);
   },
-});
-
-Posts.allow({
-	insert(userId, doc) {
-		// allow posting only if you are logged in
-		return !! userId;
-	}
 });
