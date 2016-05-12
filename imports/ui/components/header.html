@@ -14,6 +14,11 @@
         <ul class="nav navbar-nav">
           <li><a href="{{pathFor 'postSubmit'}}">Submit post</a></li>
         </ul>
+        {{#if isInRole 'admins'}}
+        <ul class="nav navbar-nav">
+          <li><a href="{{pathFor 'adminPostsList'}}">Manage posts</a></li>
+        </ul>
+        {{/if}}
         <ul class="nav navbar-nav navbar-right">
           {{> loginButtons}}
         </ul>

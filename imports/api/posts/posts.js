@@ -26,6 +26,9 @@ Meteor.methods({
     console.log(`Inserted with title: ${title}`);
   },
 
+  // I doesn`t add validation for owner rights,
+  // because in that case admin will be not able to delete posts
+  // TODO: think about normal administrator system
   'posts.remove'(postId) {
   	new SimpleSchema({
   	  postId: {type: String}
