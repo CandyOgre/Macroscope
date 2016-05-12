@@ -9,3 +9,9 @@ Template.postItem.helpers({
 		return a.hostname;
 	}
 });
+
+Template.postItem.events({
+	'click #removeBtn': function() {
+		Meteor.call('posts.remove', this._id);
+	},
+});
