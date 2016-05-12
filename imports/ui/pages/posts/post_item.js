@@ -7,6 +7,11 @@ Template.postItem.helpers({
 		let a = document.createElement('a');
 		a.href = this.url;
 		return a.hostname;
+	},
+	
+	owner() {
+		console.log(Meteor);
+		return Meteor.userId() === this.owner; 
 	}
 });
 
