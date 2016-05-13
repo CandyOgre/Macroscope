@@ -10,6 +10,10 @@ Template.postItem.helpers({
 	},
 	
 	owner() {
+		return this.ownerUsername;
+	}, 
+
+	isOwner() {
 		return Meteor.userId() === this.owner; 
 	}
 });

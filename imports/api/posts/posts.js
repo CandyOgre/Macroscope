@@ -16,10 +16,13 @@ Meteor.methods({
       return;
     }
 
+    let ownerUsername = Meteor.users.findOne(this.userId).username;
+
     Posts.insert({
       title: title,
       url: url,
-      owner: this.userId
+      owner: this.userId,
+      ownerUsername: ownerUsername
     });
 
     //TODO: check for inserting, lazy pig!

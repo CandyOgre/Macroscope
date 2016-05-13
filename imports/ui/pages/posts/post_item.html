@@ -2,8 +2,9 @@
   <div class="post">
     <div class="post-content">
       <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+      <h5>posted by {{owner}}</h5>
     </div>
-    {{#if owner}}
+    {{#if isOwner}}
     <a class="discuss btn btn-danger pull-right" id="removeBtn">
       <i class="glyphicon glyphicon-trash"></i>
     </a>
