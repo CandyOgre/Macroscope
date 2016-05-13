@@ -22,15 +22,17 @@ if(Posts.find().count() == 0) {
 }
 
 // On startup create user with administrator privileges
+if(Meteor.users.find().count() === 0) {
   let userId = 
   Accounts.createUser({
     // Is it save to store in here? 
     // Or there are some better way exist?
     username: 'admin',
-    password : 'admin',
-    profile  : {
+    password: 'admin',
+    profile: {
       //publicly visible fields like firstname goes here
     }
   });
 
   Roles.addUsersToRoles( userId, [ 'admins' ] );
+}
