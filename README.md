@@ -9,3 +9,6 @@ Project familiar to project from Discover Meteor book. I extending project by ad
 
 ###Screenshot
 ![Screenshot!](http://i63.tinypic.com/2r782o0.png)
+
+***
+[Hosted on Heroku](https://macroscope.herokuapp.com)
